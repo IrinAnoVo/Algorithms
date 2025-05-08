@@ -4,6 +4,41 @@ import org.telran.utils.TreePrinter;
 
 public class BinarySearchTree {
     private Node root;
+
+    /**
+     * Вспомогательный класс для представления узла дерева.
+     */
+    private static class Node {
+        private int value;
+        private Node left;
+        private Node right;
+
+        public Node(int value) {
+            this.value = value;
+            this.left = null;
+            this.right = null;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public Node getLeft() {
+            return left;
+        }
+
+        public void setLeft(Node left) {
+            this.left = left;
+        }
+
+        public Node getRight() {
+            return right;
+        }
+
+        public void setRight(Node right) {
+            this.right = right;
+        }
+    }
     private TreePrinter<Node> treePrinter;
     private int length = 0;
 
